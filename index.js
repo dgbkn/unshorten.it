@@ -12,7 +12,7 @@ const cheerio = require('cheerio');
 app.use(cors());
 
 
-app.get("/unshorten", (req, res) => {
+app.get("/unshorten",async function (req, res) => {
   try {
     var url = req.query.url; // $_GET["id"]
   var page = await axios({
